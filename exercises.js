@@ -52,12 +52,13 @@ console.log(canVote(18));
 function login(password){
   if (password === "test1234"){
     return "Login Success!";
-  } else{
+  } else {
     return "Nope.";
   }
 }
 console.log(login("test1234"));
 /*
+
  * #3
  * Function - isGreaterThan
  * Create a function named `isGreaterThan` which will take two parameters: `first` and `second`
@@ -70,7 +71,14 @@ console.log(login("test1234"));
  * Console.log your result.
 */
 
-
+function isGreaterThan(first, second){
+  if (first > second){
+    return true;
+  } else {
+    false;
+  }
+}
+console.log(isGreaterThan(2,1));
 /*
  * #4
  * Function - mustBeTrue
