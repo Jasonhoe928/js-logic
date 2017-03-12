@@ -75,7 +75,7 @@ function isGreaterThan(first, second){
   if (first > second){
     return true;
   } else {
-    false;
+    return false;
   }
 }
 console.log(isGreaterThan(2,1));
@@ -91,6 +91,14 @@ console.log(isGreaterThan(2,1));
  * Console.log your result.
 */
 
+function mustBeTrue(boo){
+  if (boo === "true"){
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log("4", mustBeTrue("true"));
 
 /*
  * #5
@@ -104,7 +112,14 @@ console.log(isGreaterThan(2,1));
  * Console.log your result.
 */
 
-
+function bigBird(word){
+  if (word.length === 3){
+    return "Word to Big Bird!";
+  } else {
+    return "Sesame Street is dead.";
+  }
+}
+console.log(bigBird("kek"));
 /*
  * #6
  * Function - isEqual
