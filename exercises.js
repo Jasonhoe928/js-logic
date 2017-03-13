@@ -306,6 +306,20 @@ console.log(moneyTrain(100));
  * Console.log budget and doughnutBought again.
 */ 
 
+var budget = 21;
+var doughnutPrice = 5;
+var doughnutBought = 0;
+function buyDoughnut(){
+/*  var budget = budget - doughnutPrice;
+  var doughnutBought = doughnutBought++;*/
+  budget = budget - doughnutPrice;
+  doughnutBought++;
+  return budget, doughnutBought;
+}
+console.log(buyDoughnut());
+console.log(budget, doughnutBought);
+console.log(buyDoughnut());
+console.log(budget, doughnutBought);
 
 /*
 For loops - A for loop checks a condition a specific number of times and allows us to execute a code block and evaluate a condition to determine if our loop should run again.
