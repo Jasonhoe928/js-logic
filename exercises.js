@@ -312,13 +312,17 @@ var doughnutBought = 0;
 function buyDoughnut(){
 /*  var budget = budget - doughnutPrice;
   var doughnutBought = doughnutBought++;*/
-  budget = budget - doughnutPrice;
+  if (budget >= doughnutPrice){
+    budget -= doughnutPrice;
+    doughnutBought++
+  }
+ /* budget = budget - doughnutPrice;
   doughnutBought++;
-  return budget, doughnutBought;
+  return budget, doughnutBought;*/
 }
-console.log(buyDoughnut());
+(buyDoughnut());
 console.log(budget, doughnutBought);
-console.log(buyDoughnut());
+(buyDoughnut());
 console.log(budget, doughnutBought);
 
 /*
@@ -359,6 +363,9 @@ for (var i = 0; i<numPlayers.length; i++){
 */
   var myFavFoods = ["lemon bar", "carrot cake", "nachos", "bacon cheeseburger", "ramen", "sweet potato fries", "chimichanga"];
 
+for (var i = 0; i<myFavFoods.length; i++){
+  console.log(myFavFoods[i]);
+}
 
 /*
  * #17
@@ -375,7 +382,19 @@ for (var i = 0; i<numPlayers.length; i++){
  * Console.log your result.
 */
 
-
+var numArray = [2, 49, 18, 4, 958];
+var total = 0;
+/*unction sumItUp(arr){
+  for (i = 0; i<numArray.length; i++);
+    total = total + numArray[i];
+}*/
+function sumItUp(arr){
+  for (var i = 0; i<arr.length; i++){
+    total += arr[i];
+  }
+}
+sumItUp(numArray);
+console.log("total = ", total);
 /*
  * #18
  * Function - allStars
@@ -391,6 +410,19 @@ for (var i = 0; i<numPlayers.length; i++){
   var players = ["LeBron", "Linsanity", "Kawhi", "Kobe", "Yao Ming", "Bird", "Jordan"];
   var east = [];
   var west = [];
+function allStars(ballers){
+for (var i = 0; i<ballers.length; i++){
+  console.log(ballers[i]);
+  if (i%2 === 0){
+    east.push(ballers[i]);
+  } else {
+    west.push(ballers[i]);
+  }   
+}
+}
+allStars(players);
+console.log(east);
+console.log(west);
 
 /*
  * #19
@@ -405,6 +437,28 @@ for (var i = 0; i<numPlayers.length; i++){
 */ 
 
   var subOftheDay = ["Teriyaki Chicken", "Spicy Italian", "Turkey", "BMT", "Black Forest Ham", "Meatball Marinara", "Veggie"];
+function subways(special){
+for (var i = 0; i<special.length; i++)
+  console.log(special[i]);
+  if (i%2 !== 0){
+    subOftheDay[i] = "Classic Tuna";
+  }
+}
+subways(subOftheDay);
+console.log(subOftheDay);
+
+/*function subways(special){
+  for (var i =0; i<special.length; i++){
+    //console.log(special[i]);
+    if (i % 2 === 1){
+      //console.log(special[i], i);
+      special[i] = "Classic Tuna";
+    }
+  }
+}
+subways(subOftheDay);
+console.log(subOftheDay);*/
+
 
 
 /*
@@ -418,15 +472,31 @@ Final Boss
  *
  *  The function will loop through the string value and put all the letters into an array, except for the letter "A" and "a". We don't want no stinking "A" or "a" in our array. Test your function with the `phrase` below!
 */
-
   var phrase = "An apple a day keeps Alice feeling awesome!"
-  
+  /*var newPhrase = []
+  newPhrase = str.split("");
+  function removeLetter(str){
+for (var i = 0; i < str.length; i++){
+//str.replace("a", "");
+  //newPhrase.replace("a", "");
+  //if str[i] !== "a" || str[i] !== "A";
 
+  }
+}
+removeLetter(phrase);
+console.log(newPhrase);*/
+var newArray = [];
 
-
-
-
-
+function removeLetter(str){
+  for (var i = 0; i < str.length; i++){
+    //console.log(str[i]);
+    if(str[i] !== "a" && str[i] !== "A"){
+      newArray.push(str[i]); 
+    }
+  }
+}
+removeLetter(phrase);
+console.log(newArray);
 
 
 
